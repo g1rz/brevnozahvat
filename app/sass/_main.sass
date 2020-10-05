@@ -76,3 +76,84 @@
 
 .address-text 
     max-width: 200px
+
+.header-menu 
+    position: absolute
+    padding: 56px 0 10px
+    width: 100%
+    background: #ccc 
+
+.logo 
+    display: block
+    text-decoration: none
+    &__text 
+        font-size: 13px
+        font-weight: 300
+        line-height: 15px
+        letter-spacing: 0.33px  
+        color: #fff 
+
+.menu 
+    display: flex 
+    align-items: center
+    justify-content: space-between
+    font-size: 18px
+    font-weight: 600
+    line-height: 15px
+    text-transform: uppercase
+    letter-spacing: 0.45px
+    color: #fff
+    &__item 
+        &--sep 
+            width: 5px
+            height: 5px
+            background-color: #fff
+            border-radius: 50%
+            opacity: 0.2
+    &__link 
+        text-decoration: none
+        &:hover 
+            text-decoration: underline
+
+.menu-btn
+    display: none
+    background-color: $mainColor
+    width: 40px
+    height: 30px
+    margin-left: auto
+    border-radius: 10px
+    align-items: center 
+    justify-content: center
+    padding: 0
+    outline: none 
+    border: none
+    &__icon 
+        display: block
+        width: 30px
+        height: 3px
+        background-color: #fff
+        border-radius: 2px
+        position: relative
+        &::before, &::after 
+            content: ''
+            width: 30px
+            height: 3px
+            background-color: #fff
+            position: absolute
+            left: 0
+            border-radius: 2px
+            transition: 0.2s ease
+        &::before 
+            top: -6px
+        &::after 
+            bottom: -6px
+    &.active 
+        .menu-btn 
+            &__icon 
+                background-color: $mainColor
+                &::before 
+                    top: 0
+                    transform: rotate(45deg)
+                &::after 
+                    bottom: 0
+                    transform: rotate(-45deg)

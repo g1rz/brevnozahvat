@@ -3,6 +3,9 @@
     margin-bottom: 5px
   .address-text 
     max-width: 100%
+
+  .menu 
+    font-size: 14px
 // max-width: 1200px 
   
 @media (max-width: 991px) 
@@ -28,7 +31,26 @@
       padding: 8px 14px 
       font-size: 14px 
 
-  
+  .menu 
+    display: none 
+    position: absolute
+    padding: 15px
+    width: calc(100% - 30px)
+    left: 15px
+    top: 120%
+    background-color: $mainColor
+    border-radius: 10px 
+    &__item 
+      margin-bottom: 10px
+      &:last-child 
+        margin-bottom: 0
+      &--sep 
+        display: none
+
+
+
+  .menu-btn 
+    display: flex
   
 // max-width: 991px
 

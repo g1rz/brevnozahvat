@@ -1,0 +1,36 @@
+- 
+    var menu = [
+        {
+            title: 'Виды техники',
+            link: '#types'
+        }, {
+            title: 'Преимущества',
+            link: '#advantages'
+        }, {
+            title: 'Схема работы',
+            link: '#scheme'
+        }, {
+            title: 'О компании',
+            link: '#about'
+        }, {
+            title: 'Вопросы и ответы',
+            link: '#faq'
+        }
+    ]
+
+.header-menu 
+    .container  
+        .row.row--m 
+            .cols.cols-3.cols-md-6
+                a.logo(href="/") 
+                    img.logo__img(src="img/logo.png")
+                    p.logo__text Продажа и монтаж бревнозахватов
+            nav.cols.cols-9.cols-md-6 
+                button.menu-btn 
+                    span.menu-btn__icon
+                ul.menu 
+                    each item, index in menu 
+                        li.menu__item 
+                            a.menu__link.goto(href=item.link) !{item.title}
+                        if (index !== menu.length -1) 
+                            li.menu__item.menu__item--sep
