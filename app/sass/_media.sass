@@ -1,3 +1,10 @@
+@media (max-width: 1200px)
+  .b-icon
+    margin-bottom: 5px
+  .address-text 
+    max-width: 100%
+// max-width: 1200px 
+  
 @media (max-width: 991px) 
   .banner-top
     &__wrap
@@ -10,8 +17,38 @@
     padding: 12px 25px
     font-size: 16px 
     line-height: 20px
+
+  .b-icon 
+    font-size: 14px 
+    line-height: 20px
+
+  .header-top
+    &__btn 
+      margin: 10px 0 0
+      padding: 8px 14px 
+      font-size: 14px 
+
+  
+  
 // max-width: 991px
 
+@media (max-width: 768px)
+  .b-icon 
+    font-size: 12px
+    line-height: 16px
+
+  .header-top__btn 
+    padding: 5px 14px
+    font-size: 12px 
+
+  .social 
+    margin-top: 10px
+    &__item 
+      margin-left: 8px
+    &__link
+      width: 25px
+      height: 25px
+// max-width: 768px 
 
 @media (max-width: 575px)
   .banner-top
@@ -27,5 +64,18 @@
     padding: 10px 20px
     font-size: 14px 
     line-height: 20px
+
+  .header-top__btn
+    padding: 5px 10px 
+    font-size: 12px 
+    line-height: 14px
+
+  .b-icon
+    &::before
+      width: 12px
+      height: 12px
+    &--phone 
+      padding-left: 20px
+      margin-left: auto
 // max-width: 575px
    

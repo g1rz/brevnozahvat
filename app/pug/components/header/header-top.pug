@@ -1,0 +1,46 @@
+- 
+    var phones = [
+        {
+            phone: '+7 (3952) 41-55-88 ',
+            city: 'Иркутск'
+        }, {
+            phone: '+7 (3012) 56-00-99 ',
+            city: 'Улан-Удэ'
+        }, {
+            phone: '+7 (3022) 71-33-53 ',
+            city: 'Чита'
+        }
+    ]
+
+.header-top 
+    .container 
+        .row.row--m
+            .cols.cols-6.cols-md-5
+                .row.row--wrap.row--space-b
+                    .b-icon.b-icon--address
+                        p.address-text Иркутск, ул. Ширямова, д. 40, оф. 401#[br] пн-пт с 9:00 до 18:00
+                    a.header-top__btn.popup.btn.btn--transp(href="#") Заказать обратный звонок
+            .cols.cols-6.cols-md-7
+                .row.row--wrap.row--space-b 
+                    each item in phones 
+                        - var clearPhone = item.phone.replace(/[-() ]/g, '')
+                        .b-icon.b-icon--phone 
+                            a.phone-link(href="tel:"+clearPhone) !{item.phone}
+                            p !{item.city}
+                    ul.social 
+                        li.social__item 
+                            a.social__link(href="#") 
+                                svg.social__icon
+                                    use(xlink:href="img/sprite.svg#telegram")
+                        li.social__item 
+                            a.social__link(href="#") 
+                                svg.social__icon
+                                    use(xlink:href="img/sprite.svg#whatsapp")
+                        li.social__item 
+                            a.social__link(href="#") 
+                                svg.social__icon
+                                    use(xlink:href="img/sprite.svg#viber")
+                        li.social__item 
+                            a.social__link(href="#") 
+                                svg.social__icon
+                                    use(xlink:href="img/sprite.svg#fb")

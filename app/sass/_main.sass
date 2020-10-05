@@ -19,3 +19,60 @@
         justify-content: flex-end
     &__btn 
         box-shadow: 0 9px 54px rgba(121, 202, 42, 0.25)
+
+.header-top 
+    padding: 22px 0 20px
+    background-color: #1e1e1e
+    color: #fff
+    &__btn 
+        margin: 4px 19px
+
+.b-icon 
+    position: relative
+    padding-left: 20px
+    font-size: 16px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.4px
+    &::before 
+        content: ''
+        width: 15px
+        height: 15px
+        position: absolute 
+        top: 4px
+        left: 0
+    &--address::before
+        background: url('../img/sprite.svg#pin') no-repeat center 
+        background-size: contain
+    &--phone
+        padding-left: 25px
+        &::before
+            background: url('../img/sprite.svg#phone') no-repeat center 
+            background-size: contain
+
+.phone-link 
+    text-decoration: none
+    font-weight: 600
+    &:hover 
+        text-decoration: underline
+
+.social 
+    display: flex 
+    align-items: center 
+    margin-left: auto
+    margin-top: 14px 
+    &__item 
+        display: block 
+        margin-left: 15px
+    &__link 
+        +center
+        width: 30px
+        height: 30px
+        background-color: #ffffff
+        border-radius: 50% 
+    &__icon
+        width: 60%
+        height: 60%
+
+.address-text 
+    max-width: 200px
