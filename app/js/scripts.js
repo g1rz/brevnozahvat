@@ -13,6 +13,13 @@ $(document).ready(function() {
         $('.menu').slideToggle();
     });
 
+    $('.video-link').fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+        helpers: {
+            media: {}
+        }
+    });
 
 
     // $('.using-slider').owlCarousel({

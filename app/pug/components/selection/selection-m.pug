@@ -1,0 +1,21 @@
+section.selection.block.block--gray
+    .container 
+        h2 Подберите лесозахват для решения ваших задач
+        p.subtitle В наличии техника разных видов
+        include ../tpl/product-tpl.pug
+        - 
+            var product = {
+                id: 1, 
+                title: 'Маятниковые бревнозахваты',
+                text: 'Используются на стационарных и мобильных перегружателях с перегружательной стрелой. Подходят для погрузки и разгрузки леса, перевалки камней и металлолома, разбора завалов после демонтажа, прокладки трубопроводов и других подобных работ. ', 
+                video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY', 
+                video_cover: 'img/video-empty.jpg',
+                arrPhotos: [
+                    'img/photo.jpg', 
+                    'img/photo.jpg', 
+                    'img/photo.jpg'
+                ]
+            }
+
+        +product-tpl(product.id, product.title, product.text, product.video, product.video_cover, product.arrPhotos)
+        
