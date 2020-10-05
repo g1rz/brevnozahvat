@@ -1,0 +1,27 @@
+- 
+    var advantages = [
+        {
+            icon: 'img/sprite.svg#box',
+            text: 'Техника в наличии, доставка от 1 дня'
+        }, {
+            icon: 'img/sprite.svg#repair',
+            text: 'Монтаж в любом регионе РФ'
+        }, {
+            icon: 'img/sprite.svg#gears',
+            text: 'Запчасти на складе в Иркутске и Москве'
+        }, {
+            icon: 'img/sprite.svg#truck',
+            text: 'Сервис с выездом на ваш объект'
+        }
+    ]
+
+.advantages
+    .container 
+        .row.row--m
+            each item in advantages 
+                .cols.cols-3.cols-md-6
+                    .advantages-item 
+                        .advantages-item__icon-wrap 
+                            svg.advantages-item__icon 
+                                use(xlink:href=item.icon)
+                        p !{item.text}

@@ -81,7 +81,7 @@
     position: absolute
     padding: 56px 0 10px
     width: 100%
-    background: #ccc 
+    z-index: 100
 
 .logo 
     display: block
@@ -157,3 +157,103 @@
                 &::after 
                     bottom: 0
                     transform: rotate(-45deg)
+
+.intro
+    padding: 224px 0 122px 
+    background: url('../img/intro-bg.jpg') no-repeat center 
+    background-size: cover
+    color: #fff
+    &-wrap 
+        max-width: 770px
+    &__title 
+        position: relative
+        margin-bottom: 35px
+        font-size: 50px
+        font-weight: 700
+        line-height: 64px
+        text-transform: uppercase
+        letter-spacing: 1.25px
+        span 
+            color: $mainColor
+    &__subtitle
+        font-size: 30px
+        font-weight: 400
+        line-height: 37px
+        letter-spacing: 0.75px
+    &__btn 
+        display: inline-block
+        position: relative
+        margin-top: 40px
+        padding: 23px 80px 23px 40px
+        line-height: 21px
+        border-radius: 30px
+        font-size: 18px
+        font-weight: 900
+        line-height: 20px
+        text-transform: uppercase
+        // Text style for "купить"
+        letter-spacing: 1.53px
+        background-color: $mainColor
+        text-decoration: none
+        overflow: hidden
+        &:hover 
+            .intro__btn-icon::before
+                transform: scale(10)
+    &__btn-text 
+        position: relative
+        z-index: 10
+    &__btn-icon 
+        position: absolute 
+        width: 61px
+        height: 61px
+        top: 3px
+        right: 3px
+        +center 
+        &::before 
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            border-radius: 50%
+            background-color: $activeColor
+            transition: 0.3s ease
+    &__btn-icon-svg 
+        position: relative
+        width: 15px
+        height: 15px
+        fill: #fff
+    &__img-wrap 
+        +center
+        position: absolute
+        top: 17px
+        right: 17px
+        width: 428px
+        height: 428px
+        background-color: rgba(#fff, 0.5)
+        border-radius: 50%
+        z-index: 0
+
+.advantages
+    padding: 96px 0
+
+.advantages-item 
+    margin: 0 auto
+    max-width: 190px 
+    font-size: 18px
+    font-weight: 400
+    line-height: 26px
+    letter-spacing: 0.45px
+    text-align: center
+    &__icon-wrap 
+        +center 
+        width: 143px
+        height: 143px
+        margin: 0 auto 30px
+        background-color: rgba($mainColor, 0.05)
+        border-radius: 50%
+    &__icon 
+        width: 55px
+        height: 55px
+        fill: $mainColor
