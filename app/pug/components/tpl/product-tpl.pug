@@ -9,5 +9,5 @@ mixin product-tpl(id, title, text, video, video_cover, arrPhotos)
             
     .photos 
         each item in arrPhotos
-            a.photos__link(href="img/photo.jpg", data-fancybox="gallery_"+id)
-                img.photos__img(src=item)
+            a.photos__link(href=item.big, data-fancybox="gallery_"+id)
+                img.photos__img(src=item.small)

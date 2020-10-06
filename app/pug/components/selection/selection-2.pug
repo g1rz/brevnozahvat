@@ -1,0 +1,26 @@
+section.selection.block.block--gray
+    .container 
+        include ../tpl/product-tpl.pug
+        - 
+            var product = {
+                id: 2, 
+                title: 'Бревнозахваты с жестким креплением ',
+                text: 'Устанавливаются на экскаваторную стрелу вместо ковша. Применяются для перемещения лесоматериалов и погрузочно-разгрузочных работ, монтажа столбов освещения и труб в вертикальном положении, создания зимних дорог. ', 
+                video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY', 
+                video_cover: 'img/video-empty.jpg',
+                arrPhotos: [
+                    {
+                        small: 'img/photo-2.jpg',
+                        big: 'img/photo-2.jpg'
+                    }, {
+                        small: 'img/photo-2.jpg',
+                        big: 'img/photo-2.jpg'
+                    }, {
+                        small: 'img/photo-2.jpg',
+                        big: 'img/photo-2.jpg'
+                    }
+                ]
+            }
+
+        +product-tpl(product.id, product.title, product.text, product.video, product.video_cover, product.arrPhotos)
+

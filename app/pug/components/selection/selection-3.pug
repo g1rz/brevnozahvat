@@ -1,0 +1,26 @@
+section.selection.block.block--gray
+    .container 
+        include ../tpl/product-tpl.pug
+        - 
+            var product = {
+                id: 3, 
+                title: 'Бревнозахваты с аутригером',
+                text: 'Закрепляется на экскаваторе либо перегружателе, это универсальный лесозахват. Аутригер позволяет переваливать сортамент и хлысты, широкий хват с клешнями – мелкие прутья верхушек, мусор и остальные порубочные остатки.', 
+                video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY', 
+                video_cover: 'img/video-empty.jpg',
+                arrPhotos: [
+                    {
+                        small: 'img/photo-3.jpg',
+                        big: 'img/photo-3.jpg'
+                    }, {
+                        small: 'img/photo-3.jpg',
+                        big: 'img/photo-3.jpg'
+                    }, {
+                        small: 'img/photo-3.jpg',
+                        big: 'img/photo-3.jpg'
+                    }
+                ]
+            }
+
+        +product-tpl(product.id, product.title, product.text, product.video, product.video_cover, product.arrPhotos)
+

@@ -6,7 +6,36 @@ block variables
     var description = 'Главная страница'
     var index = true
 
+include components/tpl/cta-tpl.pug 
+
+
+
 block content 
+
+  - 
+    var ctaBlocks = {
+      ctaCalc: {
+        text: 'Узнайте стоимость бревнозахвата маятникового типа в&nbsp;течение 30&nbsp;минут. Если понадобится, бесплатно поможем с&nbsp;выбором модели',
+        img: 'img/cta-calc.png'
+      },
+      ctaContract: {
+        text: 'Получите коммерческое предложение через 30 минут после обращения. При необходимости подскажем, какой бревнозахват купить',
+        img: 'img/cta-contract.png'
+      },
+      ctaManager: {
+        text: 'Обратитесь к нашим специалистам – бесплатно подберем наиболееподходящую модель лесозахвата и подготовим коммерческое предложение',
+        img: 'img/cta-manager.png'
+      }
+    }
   include components/intro.pug
   include components/advantages.pug
-  include components/selection/selection-m.pug
+
+  include components/selection/selection-1.pug
+  +cta-tpl(ctaBlocks.ctaCalc.text, ctaBlocks.ctaCalc.img)
+
+  include components/selection/selection-2.pug
+  +cta-tpl(ctaBlocks.ctaContract.text, ctaBlocks.ctaContract.img)
+
+  include components/selection/selection-3.pug
+  +cta-tpl(ctaBlocks.ctaManager.text, ctaBlocks.ctaManager.img)
+  
