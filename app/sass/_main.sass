@@ -518,6 +518,9 @@
         border-bottom: 1px solid #fff
         font-size: 16px
         outline: none 
+        &--black 
+            border-bottom-color: $black
+            color: $black
         &:focus 
             border-bottom-color: $activeColor
     &__textarea 
@@ -527,12 +530,18 @@
         border: none 
         outline: none
         color: #fff
+        &--modal 
+            box-shadow: 0 9px 54px rgba(30, 156, 36, 0.25)
 
 .c-form-bottom 
     display: flex 
     justify-content: space-between
     flex-wrap: wrap 
     margin-top: 50px
+    &--modal 
+        flex-direction: column 
+        justify-content: center
+        align-items: center
 
 .c-form-result 
     width: calc(100% - 300px)
@@ -541,6 +550,12 @@
     font-weight: 400
     line-height: 21px
     letter-spacing: 0.4px
+    &--modal 
+        color: $mainColor
+        width: 100%
+        max-width: 250px
+        margin: 44px auto 0
+        text-align: center
 
 .check 
     position: relative
@@ -580,6 +595,12 @@
             position: absolute
             top: -2px
             left: 0
+        &--black 
+            color: rgba($black, 0.5)
+            &::before 
+                border-color: $black
+            &::after 
+                background: url('../img/check-black.png') no-repeat center
 
 .media 
     margin-top: 50px
@@ -630,3 +651,11 @@
     color: #fff
     &__btn 
         margin: 4px 19px
+
+.modal 
+    display: none
+    padding: 75px 80px
+    max-width: 530px
+    box-shadow: 0 9px 54px rgba(229, 233, 238, 0.11)
+    border-radius: 8px
+    background-color: #fff

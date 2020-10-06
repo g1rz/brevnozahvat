@@ -30,6 +30,18 @@ $(document).ready(function() {
         $(this).siblings('.faq__answer').slideToggle();
     });
 
+    $('.goto').click(function() {
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+        }
+        return false;
+    });
+
+    $(".popup").fancybox({
+        type: 'inline'
+    });
+
     // $('.using-slider').owlCarousel({
     //     items: 1,
     //     loop: true,

@@ -24,7 +24,7 @@
             <div class="row row--wrap row--space-b">
               <div class="b-icon b-icon--address">
                 <p class="address-text">Иркутск, ул. Ширямова, д. 40, оф. 401<br> пн-пт с 9:00 до 18:00</p>
-              </div><a class="header-top__btn popup btn btn--transp" href="#">Заказать обратный звонок</a>
+              </div><a class="header-top__btn popup btn btn--transp" href="#callback">Заказать обратный звонок</a>
             </div>
           </div>
           <div class="cols cols-6 cols-md-7">
@@ -89,7 +89,7 @@
       <div class="container">
         <div class="intro-wrap"> 
           <h1 class="intro__title">Высокопроизводительные надежные <span>бревнозахваты из южной кореи</span></h1>
-          <p class="intro__subtitle">Гарантия на любую модель 1 год<br> либо 1 000 моточасов</p><a class="intro__btn" href="#"> <span class="intro__btn-text">Оформить заявку </span><span class="intro__btn-icon"> 
+          <p class="intro__subtitle">Гарантия на любую модель 1 год<br> либо 1 000 моточасов</p><a class="intro__btn popup" href="#callback"> <span class="intro__btn-text">Оформить заявку </span><span class="intro__btn-icon"> 
               <svg class="intro__btn-icon-svg">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg></span></a>
@@ -143,7 +143,7 @@
         </div>
       </div>
     </div>
-    <section class="selection block block--gray">
+    <section class="selection block block--gray" id="types">
       <div class="container"> 
         <h2>Подберите лесозахват для решения ваших задач</h2>
         <p class="subtitle">В наличии техника разных видов</p>
@@ -220,7 +220,7 @@
         </div>
       </div>
     </section>
-    <section class="features block block--gray"> 
+    <section class="features block block--gray" id="advantages">
       <div class="container"> 
         <h2>Бревнозахваты Daehan адаптированы к российским условиям – работают при температуре до –40 ˚C</h2>
         <p class="subtitle">Другие преимущества южнокорейской техники:</p>
@@ -292,7 +292,7 @@
         </div>
       </div>
     </section>
-    <section class="scheme block"> 
+    <section class="scheme block" id="scheme">
       <div class="container"> 
         <h2>Купите лесозахваты на&nbsp;экскаваторы со&nbsp;складов<br> в&nbsp;Иркутске и&nbsp;Москве</h2>
         <p class="subtitle">Доставка по России займет от 1 до 10 дней  в зависимости от вашего региона</p>
@@ -438,7 +438,7 @@
         </div>
       </div>
     </section>
-    <section class="about block"> 
+    <section class="about block" id="about">
       <div class="container"> 
         <h2>Работайте без простоев – обеспечим бесперебойную эксплуатацию лесозахватов</h2>
         <p class="subtitle">Оказываем полный комплекс услуг, от подбора до ремонта спецтехники</p>
@@ -451,7 +451,7 @@
         </div>
       </div>
     </section>
-    <div class="faq block">
+    <div class="faq block" id="faq">
       <div class="container"> 
         <h2>Полезная информация по покупке лесозахватов на экскаваторы</h2>
         <p class="subtitle">Ответы на популярные вопросы наших клиентов</p>
@@ -558,7 +558,7 @@
             <div class="row row--wrap row--space-b">
               <div class="b-icon b-icon--address">
                 <p class="address-text">Иркутск, ул. Ширямова, д. 40, оф. 401<br> пн-пт с 9:00 до 18:00</p>
-              </div><a class="header-top__btn popup btn btn--transp" href="#">Заказать обратный звонок</a>
+              </div><a class="header-top__btn popup btn btn--transp popup" href="#callback">Заказать обратный звонок</a>
             </div>
           </div>
           <div class="cols cols-6 cols-md-7">
@@ -578,6 +578,23 @@
       </div>
     </div>
   </footer>
+  <div class="modal" id="callback">
+    <h2>обратный звонок</h2>
+    <form class="c-form"> 
+      <input class="c-form__input c-form__input--black" type="text" name="name" placeholder="Имя" autocomplete="off">
+      <input class="c-form__input c-form__input--black" type="text" name="phone" placeholder="Телефон *" required autocomplete="off">
+      <div class="check">
+        <input class="check__input" type="checkbox" name="pdn" id="pdn2" required>
+        <label class="check__label check__label--black" for="pdn2">Разрешаю обработку персональных данных</label>
+      </div>
+      <div class="c-form-bottom c-form-bottom--modal">
+        <input class="c-form__submit c-form__submit--modal btn btn--active" type="submit" value="перезвоните мне">
+        <div class="c-form-result c-form-result--modal">
+          <p>Спасибо за&nbsp;обращение! Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время</p>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="js/libs.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>

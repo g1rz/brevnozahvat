@@ -1,0 +1,12 @@
+.modal#callback
+    h2 обратный звонок
+    form.c-form 
+        input.c-form__input.c-form__input--black(type="text", name="name", placeholder="Имя", autocomplete="off")
+        input.c-form__input.c-form__input--black(type="text", name="phone", placeholder="Телефон *", required,  autocomplete="off")
+        .check
+            input.check__input(type="checkbox",name="pdn" id="pdn2", required)
+            label.check__label.check__label--black(for="pdn2") Разрешаю обработку персональных данных
+        .c-form-bottom.c-form-bottom--modal
+            input.c-form__submit.c-form__submit--modal.btn.btn--active(type="submit", value="перезвоните мне")
+            .c-form-result.c-form-result--modal
+                p Спасибо за&nbsp;обращение! Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время
