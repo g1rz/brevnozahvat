@@ -1,0 +1,12 @@
+h2.text-left Узнайте стоимость бревнозахватов
+    form.c-form 
+        input.c-form__input(type="text", name="name", placeholder="Имя")
+        input.c-form__input(type="text", name="phone", placeholder="Телефон *", required)
+        textarea.c-form__textarea(name="comment", placeholder="Комментарий к заявке")
+        .check
+            input.check__input(type="checkbox",name="pdn" id="pdn", required)
+            label.check__label(for="pdn") Разрешаю обработку персональных данных
+        .c-form-bottom
+            input.c-form__submit.btn.btn--active(type="submit", value="Отправить ЗАЯВКУ")
+            .c-form-result
+                //- p Спасибо за&nbsp;обращение! Перезвоним в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время

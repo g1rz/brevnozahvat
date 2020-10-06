@@ -418,7 +418,7 @@
         width: calc(100% - 67px)
 
 .about
-    background: url('../img/about-bg.png') no-repeat bottom center
+    background: url('../img/about-bg.jpg') no-repeat bottom center
     background-size: cover
     &__img 
         display: block 
@@ -428,3 +428,205 @@
         margin-top: 50px
     p 
         margin-bottom: 20px
+
+.faq 
+    &__row 
+        margin-bottom: -30px
+    &__item 
+        margin-bottom: 30px
+        box-shadow: 0 0 20px 2px rgba(51, 51, 51, 0.1)
+        border-radius: 15px
+        background-color: #fff        
+    &__question 
+        position: relative
+        display: flex 
+        align-items: center
+        padding: 20px 20px 20px 60px
+        min-height: 65px
+        font-weight: 700
+        cursor: pointer
+        &.active 
+            .faq__icon 
+                transform: translateY(-50%) rotate(90deg)
+    &__icon 
+        width: 16px
+        height: 16px
+        position: absolute 
+        top: 50%
+        left: 26px
+        transform: translateY(-50%)
+        background: url('../img/sprite.svg#icon-arrow') no-repeat center
+        transform-origin: 50% 50%
+        transition: 0.3s ease
+    &__answer 
+        display: none 
+        padding: 0 20px 20px 60px
+
+.contacts 
+    overflow: hidden
+    &__item 
+        position: relative
+        width: 50%
+        padding-left: 15px
+        padding-right: 15px
+        &--left
+            padding-top: 94px
+            padding-bottom: 100px
+            color: #fff
+            &::before
+                content: ''
+                position: absolute
+                right: 0
+                top: 0
+                left: -200%
+                height: 100%
+                background: url('../img/contact-form-bg.jpg') no-repeat center center
+                background-repeat: no-repeat
+                background-position: center
+                background-size: cover
+                z-index: -1
+
+.question 
+    // position: relative
+    margin-left: -15px
+    margin-right: -15px 
+    padding: 94px 20px 90px 53px
+    font-weight: 600
+    &::before
+        content: ''
+        position: absolute
+        right: -200%
+        top: 0
+        left: 0
+        height: 100%
+        background: #f9fafb
+        z-index: -1
+    &__text 
+        letter-spacing: 0.45px
+
+.c-form 
+    margin-top: 26px
+   
+    &__input, &__textarea
+        color: #fff
+        margin-bottom: 20px
+        padding: 10px 0 
+        max-width: 370px
+        width: 100% 
+        background: transparent 
+        border: none 
+        border-bottom: 1px solid #fff
+        font-size: 16px
+        outline: none 
+        &:focus 
+            border-bottom-color: $activeColor
+    &__textarea 
+        height: 92px
+    &__submit 
+        padding: 20px 40px
+        border: none 
+        outline: none
+        color: #fff
+
+.c-form-bottom 
+    display: flex 
+    justify-content: space-between
+    flex-wrap: wrap 
+    margin-top: 50px
+
+.c-form-result 
+    width: calc(100% - 300px)
+    color: rgba(#fff, 0.5)
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+    letter-spacing: 0.4px
+
+.check 
+    position: relative
+    &__input 
+        position: absolute
+        top: 0
+        left: 0
+        // visibility: hidden
+        z-index: -1000
+        &:checked + 
+            .check__label::after 
+                display: block
+    &__label 
+        position: relative
+        padding-left: 26px
+        font-size: 13px
+        font-weight: 400
+        line-height: 20px
+        letter-spacing: 0.33px
+        color: rgba(#fff, 0.5)
+        cursor: pointer
+        &::before 
+            content: ''
+            width: 17px
+            height: 17px
+            border-radius: 2px
+            border: 1px solid #fff
+            position: absolute
+            top: -2px
+            left: 0
+        &::after 
+            content: ''
+            display: none
+            width: 17px
+            height: 17px
+            background: url('../img/check.png') no-repeat center
+            position: absolute
+            top: -2px
+            left: 0
+
+.media 
+    margin-top: 50px
+    display: flex 
+    &__item 
+        margin-right: 40px
+        &:last-child 
+            margin-right: 0
+    &__link 
+        display: block 
+    &__icon 
+        width: 30px
+        height: 30px
+        &--telegram 
+            fill: #0088cc
+        &--whatsapp 
+            fill: #43d854
+        &--viber 
+            fill: #59267c
+        &--fb
+            fill: #3b5998        
+
+.map-wrap 
+    height: 373px
+    position: relative
+    margin-left: -15px
+    margin-right: -15px
+    iframe 
+        width: 100%
+        height: 100%
+        border: none
+
+.footer-menu 
+    padding: 40px 0
+
+.f-menu 
+    display: flex 
+    justify-content: space-between 
+    line-height: 20px
+    &__link
+        text-decoration: none
+        &:hover 
+            color: $activeColor
+
+.footer-bottom 
+    padding: 22px 0 20px
+    background-color: #1e1e1e
+    color: #fff
+    &__btn 
+        margin: 4px 19px

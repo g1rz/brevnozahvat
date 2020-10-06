@@ -1,0 +1,24 @@
+footer.footer 
+    .footer-menu 
+        .container 
+            ul.f-menu 
+                each item in menu 
+                    li.f-menu__item 
+                        a.f-menu__link.goto(href=item.link) !{item.title}
+    
+    .footer-bottom 
+        .container 
+            .row.row--m
+                .cols.cols-6.cols-md-5
+                    .row.row--wrap.row--space-b
+                        .b-icon.b-icon--address
+                            p.address-text Иркутск, ул. Ширямова, д. 40, оф. 401#[br] пн-пт с 9:00 до 18:00
+                        a.header-top__btn.popup.btn.btn--transp(href="#") Заказать обратный звонок
+                .cols.cols-6.cols-md-7
+                    .row.row--wrap.row--space-b 
+                        each item in phones 
+                            - var clearPhone = item.phone.replace(/[-() ]/g, '')
+                            .b-icon.b-icon--phone 
+                                a.phone-link(href="tel:"+clearPhone) !{item.phone}
+                                p !{item.city}
+                        
