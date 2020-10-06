@@ -799,19 +799,26 @@ h3 {
   border-radius: 8px; }
   .video-c__btn {
     position: absolute;
+    width: 100%;
+    height: 100%; }
+    .video-c__btn:hover .video-c__btn-icon {
+      -webkit-transform: translate(-50%, -50%) scale(1.1);
+          -ms-transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.1); }
+    .video-c__btn:active .video-c__btn-icon {
+      -webkit-transform: translate(-50%, -50%) scale(1);
+          -ms-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1); }
+  .video-c__btn-icon {
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-    .video-c__btn:hover {
-      -webkit-transform: translate(-50%, -50%) scale(1.1);
-          -ms-transform: translate(-50%, -50%) scale(1.1);
-              transform: translate(-50%, -50%) scale(1.1); }
-    .video-c__btn:active {
-      -webkit-transform: translate(-50%, -50%) scale(1);
-          -ms-transform: translate(-50%, -50%) scale(1);
-              transform: translate(-50%, -50%) scale(1); }
+            transform: translate(-50%, -50%);
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
 
 .photos {
   display: -webkit-box;

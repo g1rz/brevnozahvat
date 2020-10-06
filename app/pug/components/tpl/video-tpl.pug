@@ -2,4 +2,5 @@ mixin video-tpl(cover, video, mode = '')
     .video-c(class=mode)
         img.video-c__img(src=cover)
         a.video-c__btn.video-link(href=video)
-            img.video-c__btn-icon(src="img/play-button.png")
+            span.video-c__btn-wrap
+                img.video-c__btn-icon(src="img/play-button.png")
