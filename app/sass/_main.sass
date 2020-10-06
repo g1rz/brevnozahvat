@@ -340,3 +340,79 @@
     &__title 
         margin-bottom: 10px
         font-weight: 700
+
+.scheme-list 
+    display: flex 
+    justify-content: space-between
+    margin-top: 54px
+
+.scheme-item 
+    position: relative
+    width: 220px
+    padding-right: 20px
+    &::after 
+        content: ''
+        width: 107px
+        height: 18px
+        background: url('../img/arrow-scheme.png') no-repeat center 
+        background-size: contain
+        position: absolute 
+        top: 40px
+        right: -7px
+    &:last-child::after
+        display: none
+    &__icon-wrap 
+        +center 
+        margin: 0 4px 32px
+        width: 96px
+        height: 96px
+        background-color: $mainColor
+        border-radius: 50%
+        position: relative
+        z-index: 10
+    &__icon 
+        width: 37px
+        height: 37px
+        fill: #fff
+
+.info 
+    margin-top: 50px
+
+.info-item 
+    padding: 42px 44px
+    height: 100%
+    box-shadow: 0 9px 54px rgba(229, 233, 238, 0.5)
+    border-radius: 8px
+    background-color: #fff
+    &__title 
+        margin-bottom: 10px
+        font-weight: 700
+    &__text 
+        min-height: 78px
+
+.info-list 
+    display: flex 
+    flex-wrap: wrap 
+    margin-top: 15px
+    margin-left: -15px
+    margin-right: -15px
+    margin-bottom: -16px
+    &__item 
+        display: flex 
+        align-items: center
+        width: 50%
+        padding: 0 15px
+        margin-bottom: 14px
+    &__icon-wrap 
+        +center
+        margin-right: 20px
+        width: 45px
+        height: 45px
+        background-color: rgba(#ffc600, 0.1)
+        border-radius: 50%
+    &__icon
+        fill: #ffc600 
+        width: 23px
+        height: 23px
+    &__text 
+        width: calc(100% - 67px)

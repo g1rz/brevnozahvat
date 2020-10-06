@@ -1,0 +1,32 @@
+-
+    var scheme = [
+        {
+            icon: 'img/sprite.svg#request',
+            text: 'Оставьте заявку, подберем лесозахваты под ваш бюджет и задачи'
+        }, {
+            icon: 'img/sprite.svg#comment',
+            text: 'Обсудите условия сотрудничества с менеджером'
+        }, {
+            icon: 'img/sprite.svg#booking',
+            text: 'Получите и подпишите договор на поставку спецтехники'
+        }, {
+            icon: 'img/sprite.svg#send',
+            text: 'Отправим бревнозахваты со склада в Иркутске либо Москве'
+        }, {
+            icon: 'img/sprite.svg#clock',
+            text: 'Примите заказ через 1–10 дней в зависимости от удаленности'
+        }
+    ]
+
+section.scheme.block 
+    .container 
+        h2 Купите лесозахваты на&nbsp;экскаваторы со&nbsp;складов#[br] в&nbsp;Иркутске и&nbsp;Москве
+        p.subtitle Доставка по России займет от 1 до 10 дней  в зависимости от вашего региона
+        .scheme-list 
+            each item in scheme 
+                .scheme-item 
+                    .scheme-item__icon-wrap 
+                        svg.scheme-item__icon 
+                            use(xlink:href=item.icon)
+                    p !{item.text}
+        include info.pug

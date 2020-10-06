@@ -1,0 +1,60 @@
+-
+    var info = [
+        {
+            title: 'Способы оплаты',
+            text: 'Выберите наиболее удобный и выгодный, предлагаем своим клиентам различные способы оплаты: ',
+            list: [
+                {
+                    icon: 'img/sprite.svg#pay',
+                    text: 'Наличный расчет'
+                }, {
+                    icon: 'img/sprite.svg#credit-card',
+                    text: 'Безналичный с НДС'
+                }, {
+                    icon: 'img/sprite.svg#pay-2',
+                    text: 'Предоплата'
+                }, {
+                    icon: 'img/sprite.svg#bill',
+                    text: 'Аккредитив'
+                } ,{
+                    icon: 'img/sprite.svg#money',
+                    text: 'Лизинг или кредит'
+                }, {
+                    icon: 'img/sprite.svg#wallet',
+                    text: 'Комбинированный способ'
+                }
+            ]
+        }, {
+            title: 'Варианты доставки',
+            text: 'Попросите наших сотрудников найти самый быстрый и недорогой способ доставки бревнозахватов на экскаватор. Возможна отправка:',
+            list: [
+                {
+                    icon: 'img/sprite.svg#delivery-truck',
+                    text: 'Автомобилем'
+                }, {
+                    icon: 'img/sprite.svg#ship',
+                    text: 'Морским транспортом'
+                }, {
+                    icon: 'img/sprite.svg#train',
+                    text: 'Железной дорогой'
+                }, {
+                    icon: 'img/sprite.svg#reuse',
+                    text: 'Комбинированным способом'
+                }
+            ]
+        }
+    ]
+
+.info.row.row--m.row--stretch
+    each item in info
+        .cols.cols-6.cols-md-12
+            .info-item 
+                p.info-item__title !{item.title}
+                p.info-item__text !{item.text}
+                ul.info-list
+                    each listItem in item.list 
+                        li.info-list__item 
+                            .info-list__icon-wrap 
+                                svg.info-list__icon
+                                    use(xlink:href=listItem.icon)
+                            p.info-list__text !{listItem.text}
