@@ -16,6 +16,17 @@
     &__btn 
       position: relative
       z-index: 10
+
+  .features-item 
+    &__icon-wrap 
+      margin: 10px 30px 4px 4px
+      width: 100px
+      height: 100px
+    &__icon 
+      width: 50px
+      height: 50px
+    &__body
+      width: calc(100% - 134px)
 // max-width: 1200px 
   
 @media (max-width: 991px) 
@@ -79,6 +90,10 @@
 // max-width: 991px
 
 @media (max-width: 768px)
+  body 
+    font-size: 16px 
+    line-height: 20px
+
   h2 
     margin-bottom: 15px
     font-size: 24px
@@ -128,6 +143,20 @@
       display: none
     &__btn 
       margin-top: 20px
+
+ 
+
+  .features-item 
+    margin-bottom: 30px
+    &__icon-wrap 
+      margin: 4px 20px 4px 4px
+      width: 70px
+      height: 70px
+    &__icon 
+      width: 30px
+      height: 30px
+    &__body
+      width: calc(100% - 94px)
 // max-width: 768px 
 
 @media (max-width: 575px)

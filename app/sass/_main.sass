@@ -271,6 +271,10 @@
             transform: translate(-50%, -50%) scale(1.1)
         &:active .video-c__btn-icon
             transform: translate(-50%, -50%) scale(1)
+        &.min 
+            .video-c__btn-icon
+                width: 65px
+                height: 65px
     &__btn-icon
         position: absolute 
         top: 50%
@@ -310,3 +314,29 @@
         position: absolute
         bottom: -46px
         right: 178px
+
+.features 
+    &__row 
+        margin-bottom: 35px
+
+.features-item 
+    display: flex
+    margin-bottom: 55px
+    &__icon-wrap 
+        +center
+        margin: 10px 47px 4px 18px
+        width: 135px
+        height: 135px
+        border: 2px solid #ffffff
+        background-color: #ffc600
+        border-radius: 50%
+        box-shadow: 0 0 0 4px #ffc600
+    &__icon
+        width: 62px
+        height: 62px
+        fill: #fff
+    &__body 
+        width: calc(100% - 200px)
+    &__title 
+        margin-bottom: 10px
+        font-weight: 700

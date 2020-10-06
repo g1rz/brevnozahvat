@@ -1,0 +1,56 @@
+- 
+    var features = [
+        {
+            icon: 'img/sprite.svg#log',
+            title: 'Высокая производительность',
+            text: 'Переваливайте максимальное количество бревен за меньший период – площадь лесозахватов Daehan составляет NN м³, на 15–47 % больше в сравнении со спецтехникой других производителей '
+        }, {
+            icon: 'img/sprite.svg#fuel',
+            title: 'Экономичность',
+            text: 'Сократите расходы на топливо – за счет широкого хвата возрастет скорость работы, а значит уменьшится время работы двигателя экскаватора. Экономия с одной машины составит 80–250 л  дизеля в месяц'
+        }, {
+            icon: 'img/sprite.svg#grab',
+            title: 'Универсальность',
+            text: 'Выполняйте дополнительные работы при необходимости – например, переваливайте ветки, камни и мусор. Южнокорейские бревнозахваты Daehan являются универсальными'
+        }, {
+            icon: 'img/sprite.svg#medal',
+            title: 'Надежность и долговечность',
+            text: 'Купите лесозахват с гарантией 1 год. Техника прослужит долго – ее детали выполнены из толстостенного листового проката фирмы POSCO, а в качестве сердца используются два надежных французских гидромотора поворота Poclain'
+        }
+    ]
+
+    var videos = [
+        {
+            video_cover: 'img/video-empty.jpg',
+            video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY'
+        }, {
+            video_cover: 'img/video-empty.jpg',
+            video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY'
+        }, {
+            video_cover: 'img/video-empty.jpg',
+            video: 'https://www.youtube.com/watch?v=ONHj8Xj9hKY'
+        }
+    ]
+
+include tpl/video-tpl.pug
+
+section.features.block.block--gray 
+    .container 
+        h2 Бревнозахваты Daehan адаптированы к российским условиям – работают при температуре до –40 ˚C
+        p.subtitle Другие преимущества южнокорейской техники:
+        .features__row.row.row--m 
+            each item in features 
+                .cols.cols-6.cols-md-12
+                    .features-item 
+                        .features-item__icon-wrap 
+                            svg.features-item__icon 
+                                use(xlink:href=item.icon)
+                        .features-item__body 
+                            p.features-item__title !{item.title}
+                            p !{item.text}
+
+        p.subtitle Посмотрите на бревнозахваты Daehan в деле:
+        .row.row--m.row--center
+            each item in videos 
+                .cols.cols-4.cols-md-6.cols-xs-12
+                    +video-tpl(item.video_cover, item.video, 'min')
