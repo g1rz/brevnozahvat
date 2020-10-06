@@ -63,6 +63,8 @@
     @for $i from 1 through 12
         .cols-md-#{$i}
             width: $i * 100% / 12
+    .row--md-reverse 
+        flex-direction: column-reverse
 
 @media (max-width: 768px)
     @for $i from 1 through 12
