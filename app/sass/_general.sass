@@ -113,11 +113,22 @@ h3
         letter-spacing: 0.4px
         border: 2px solid $mainColor
         text-transform: none
+        &:hover 
+            color: $activeColor
+            border-color: $activeColor
 
 .block
     padding: 93px 0
     &--gray 
         background-color: #f9fafb
+
+.text
+    &-left 
+        text-align: left
+    &-center 
+        text-align: center
+    &-right 
+        text-align: right
 
 
 .owl-carousel .owl-nav
@@ -173,12 +184,3 @@ h3
 #top:hover 
     opacity: 1
 
-
-/** Костыль для меню!!! протестироватьь !!! **/
-.main-content
-    position: relative
-    z-index: 5
-
-body 
-    position: relative
-    z-index: 1

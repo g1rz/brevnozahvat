@@ -18,3 +18,11 @@ section.selection.block.block--gray
             }
 
         +product-tpl(product.id, product.title, product.text, product.video, product.video_cover, product.arrPhotos)
+
+include ../tpl/cta-tpl.pug 
+- 
+    var ctaCalc = {
+        text: 'Узнайте стоимость бревнозахвата маятникового типа в&nbsp;течение 30&nbsp;минут. Если понадобится, бесплатно поможем с&nbsp;выбором модели',
+        img: 'img/cta-calc.png'
+    }
++cta-tpl(ctaCalc.text, ctaCalc.img)

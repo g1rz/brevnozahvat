@@ -1,0 +1,9 @@
+mixin cta-tpl(text, img)    
+    section.cta
+        .container 
+            .cta__row.row.row--m.row--align-c
+                .cols.cols-7.cols-sm-12
+                    p.cta__text !{text}
+                .cols.cols-5.cols-sm-12.text-right
+                    a.cta__btn.btn.btn--active.popup(href="#callback") ОФОРМИТЬ ЗАЯВКУ
+                    img.cta__img(src=img)
