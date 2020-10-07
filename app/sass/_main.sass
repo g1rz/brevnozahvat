@@ -70,9 +70,13 @@
         height: 30px
         background-color: #ffffff
         border-radius: 50% 
+        &:hover 
+            .social__icon 
+                fill: $mainColor
     &__icon
         width: 60%
         height: 60%
+        transition: 0.3s ease
 
 .address-text 
     max-width: 200px
@@ -292,6 +296,8 @@
     &__link 
         display: block 
         padding: 0 3px
+        border-radius: 8px 
+        overflow: hidden
 
 .cta 
     padding: 46px 0
@@ -611,9 +617,20 @@
             margin-right: 0
     &__link 
         display: block 
+        &:hover 
+            .media__icon 
+                &--telegram 
+                    fill: lighten(#0088cc, 10%)
+                &--whatsapp 
+                    fill: lighten(#43d854, 10%)
+                &--viber 
+                    fill: lighten(#59267c, 10%)
+                &--fb
+                    fill: lighten(#3b5998, 10%) 
     &__icon 
         width: 30px
         height: 30px
+        transition: 0.3s ease
         &--telegram 
             fill: #0088cc
         &--whatsapp 

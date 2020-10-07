@@ -1,5 +1,6 @@
 h2.text-left Узнайте стоимость бревнозахватов
     form.c-form 
+        input(type="hidden", name="act", value="order")
         input.c-form__input(type="text", name="name", placeholder="Имя")
         input.c-form__input(type="text", name="phone", placeholder="Телефон *", required)
         textarea.c-form__textarea(name="comment", placeholder="Комментарий к заявке")

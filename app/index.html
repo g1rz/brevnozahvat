@@ -89,7 +89,7 @@
       <div class="container">
         <div class="intro-wrap"> 
           <h1 class="intro__title">Высокопроизводительные надежные <span>бревнозахваты из южной кореи</span></h1>
-          <p class="intro__subtitle">Гарантия на любую модель 1 год<br> либо 1 000 моточасов</p><a class="intro__btn popup" href="#callback"> <span class="intro__btn-text">Оформить заявку </span><span class="intro__btn-icon"> 
+          <p class="intro__subtitle">Гарантия на любую модель 1 год<br> либо 1 000 моточасов</p><a class="intro__btn goto" href="#order"> <span class="intro__btn-text">Оформить заявку </span><span class="intro__btn-icon"> 
               <svg class="intro__btn-icon-svg">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg></span></a>
@@ -166,7 +166,7 @@
           <div class="cols cols-7 cols-sm-12">
             <p class="cta__text">Узнайте стоимость бревнозахвата маятникового типа в&nbsp;течение 30&nbsp;минут. Если понадобится, бесплатно поможем с&nbsp;выбором модели</p>
           </div>
-          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active popup" href="#callback">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-calc.png"/></div>
+          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active goto" href="#order">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-calc.png"/></div>
         </div>
       </div>
     </section>
@@ -191,7 +191,7 @@
           <div class="cols cols-7 cols-sm-12">
             <p class="cta__text">Получите коммерческое предложение через 30 минут после обращения. При необходимости подскажем, какой бревнозахват купить</p>
           </div>
-          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active popup" href="#callback">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-contract.png"/></div>
+          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active goto" href="#order">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-contract.png"/></div>
         </div>
       </div>
     </section>
@@ -216,7 +216,7 @@
           <div class="cols cols-7 cols-sm-12">
             <p class="cta__text">Обратитесь к нашим специалистам – бесплатно подберем наиболееподходящую модель лесозахвата и подготовим коммерческое предложение</p>
           </div>
-          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active popup" href="#callback">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-manager.png"/></div>
+          <div class="cols cols-5 cols-sm-12 text-right"><a class="cta__btn btn btn--active goto" href="#order">ОФОРМИТЬ ЗАЯВКУ</a><img class="cta__img" src="img/cta-manager.png"/></div>
         </div>
       </div>
     </section>
@@ -494,9 +494,10 @@
     <div class="contacts"> 
       <div class="container"> 
         <div class="contacts__row row row--m">
-          <div class="contacts__item contacts__item--left">
+          <div class="contacts__item contacts__item--left" id="order">
             <h2 class="text-left">Узнайте стоимость бревнозахватов
               <form class="c-form"> 
+                <input type="hidden" name="act" value="order">
                 <input class="c-form__input" type="text" name="name" placeholder="Имя">
                 <input class="c-form__input" type="text" name="phone" placeholder="Телефон *" required>
                 <textarea class="c-form__textarea" name="comment" placeholder="Комментарий к заявке"></textarea>
@@ -581,6 +582,7 @@
   <div class="modal" id="callback">
     <h2>обратный звонок</h2>
     <form class="c-form"> 
+      <input type="hidden" name="act" value="callback">
       <input class="c-form__input c-form__input--black" type="text" name="name" placeholder="Имя" autocomplete="off">
       <input class="c-form__input c-form__input--black" type="text" name="phone" placeholder="Телефон *" required autocomplete="off">
       <div class="check">

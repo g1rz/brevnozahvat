@@ -551,9 +551,14 @@ h3 {
     height: 30px;
     background-color: #ffffff;
     border-radius: 50%; }
+    .social__link:hover .social__icon {
+      fill: #1e9c24; }
   .social__icon {
     width: 60%;
-    height: 60%; }
+    height: 60%;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
 
 .address-text {
   max-width: 200px; }
@@ -852,7 +857,9 @@ h3 {
   margin-right: -3px; }
   .photos__link {
     display: block;
-    padding: 0 3px; }
+    padding: 0 3px;
+    border-radius: 8px;
+    overflow: hidden; }
 
 .cta {
   padding: 46px 0;
@@ -1261,9 +1268,20 @@ h3 {
       margin-right: 0; }
   .media__link {
     display: block; }
+    .media__link:hover .media__icon--telegram {
+      fill: #00aaff; }
+    .media__link:hover .media__icon--whatsapp {
+      fill: #6de17a; }
+    .media__link:hover .media__icon--viber {
+      fill: #7532a3; }
+    .media__link:hover .media__icon--fb {
+      fill: #4c70ba; }
   .media__icon {
     width: 30px;
-    height: 30px; }
+    height: 30px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
     .media__icon--telegram {
       fill: #0088cc; }
     .media__icon--whatsapp {

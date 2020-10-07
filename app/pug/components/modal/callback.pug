@@ -1,6 +1,7 @@
 .modal#callback
     h2 обратный звонок
     form.c-form 
+        input(type="hidden", name="act", value="callback")
         input.c-form__input.c-form__input--black(type="text", name="name", placeholder="Имя", autocomplete="off")
         input.c-form__input.c-form__input--black(type="text", name="phone", placeholder="Телефон *", required,  autocomplete="off")
         .check
