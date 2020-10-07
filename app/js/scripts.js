@@ -1,12 +1,3 @@
-// function mf_height_function() {
-//     var mf_height = $('footer').innerHeight();
-//     $('body').css('padding-bottom', mf_height + 'px');
-// }
-
-// $(window).on('load resize change', function() {
-//     mf_height_function();
-// });
-
 $(document).ready(function() {
     $('.menu-btn').click(function() {
         $(this).toggleClass('active');
@@ -59,4 +50,18 @@ $(document).ready(function() {
     //         },
     //     },
     // });
+});
+
+$(document).on("submit", '.c-form', function(e) {
+    e.preventDefault();
+    var form = $(this);
+
+    $.post('/send.php', form.serializeArray(), function(data) {
+        if (data) {
+            form.trigger('reset');
+            form.find('.c-form-result').show().html(data);
+        }
+    });
+
+    return false;
 });

@@ -1200,6 +1200,7 @@ h3 {
             align-items: center; }
 
 .c-form-result {
+  display: none;
   width: calc(100% - 300px);
   color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
@@ -1292,7 +1293,7 @@ h3 {
       fill: #3b5998; }
 
 .map-wrap {
-  height: 373px;
+  height: 326px;
   position: relative;
   margin-left: -15px;
   margin-right: -15px; }
